@@ -9,15 +9,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 
-import java.lang.SuppressWarnings;
-
-@SuppressWarnings({"unchecked", "unsafe", "all"})
 public class FullTraderTest {
-    Trader<Drivable> trader;
+    Trader trader;
 
     @Before
     public void setUp() {
-        trader = new Trader<>(10);
+        trader = new Trader();
     }
 
     @Test(timeout = 50)
@@ -29,7 +26,7 @@ public class FullTraderTest {
 
     @Test(timeout = 50)
     public void TestAddToWishlist() {
-        trader.addToWishlist(new Horse());
+        trader.addToWishlist(new Hatchimal(1));
         assertEquals(1, trader.getWishlist().size());
     }
 
