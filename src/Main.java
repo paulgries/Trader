@@ -28,8 +28,8 @@ public class Main {
         request.add(riverPebble);
         request.add(hummingbear);
 
-        System.out.println("Request sum: " + getSum(request));
         System.out.println("Offer sum: " + getSum(offer));
+        System.out.println("Request sum: " + getSum(request));
 
         System.out.println(trader.evaluateTrade(offer, request));
     }

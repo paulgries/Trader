@@ -14,10 +14,6 @@ public class Trader {
         this.items.add(t);
     }
 
-    public void addToWishlist(Tradable t) {
-        this.wishlist.add(t);
-    }
-
     /**
      * Agree to a trade if all of the following are true:
      * - at least one item in the offer list is in this Trader's wishlist
@@ -46,5 +42,9 @@ public class Trader {
         boolean valueWithinRange = Math.abs(offerValue - requestValue) <= 0.1 * requestValue;
 
         return offerContainsWishlistItem && allItemsInInventory && valueWithinRange;
+    }
+
+    public void addToWishlist(Tradable t) {
+        this.wishlist.add(t);
     }
 }
